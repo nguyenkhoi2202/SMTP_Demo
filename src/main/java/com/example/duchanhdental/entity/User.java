@@ -19,11 +19,11 @@ public class User {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private UUID id;
 
-    @Column(name = "user_name", nullable = false)
+    @Column(name = "user_name", nullable = true, unique = true)
     @Type(type = "org.hibernate.type.TextType")
     private String userName;
 
-    @Column(name = "password", nullable = false)
+    @Column(name = "password", nullable = true)
     @Type(type = "org.hibernate.type.TextType")
     private String password;
 
